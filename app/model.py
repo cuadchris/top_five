@@ -1,11 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
-from app import app
-
-db = SQLAlchemy()
-
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:test123@localhost/rappers"
-
-db.init_app(app)
+from app import app, db
 
 class Rapper(db.Model):
     id = db.Column(db.Integer, primary_key=True)
