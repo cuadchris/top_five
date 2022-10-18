@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content%}
+
+  <div class="container text-center">
+      <h1 class="my-5">My Top Five</h1>
+      <div class="row">
+          {% for artist in topfive %}
+          <div class="col">
+              <div class="card">
+                  <img src= {{artist.image}} class="card-img-top" alt="rapper" style="width:200px;height:250px">
+                <div class="card-body">
+                  <h5 class="card-title">{{artist.name}}</h5>
+                  <p class="card-text text-muted">{{artist.bio}}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+  </div>
+
+{% endblock content%}
