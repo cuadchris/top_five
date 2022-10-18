@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from model import topfive
+from app.model import topfive
 
 @app.route("/")
 @app.route("/home")
